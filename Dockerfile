@@ -1,6 +1,5 @@
 FROM ubuntu:16.04
 RUN apt-get -y update
-RUN apt-get -y update
 RUN apt-get -y install python2.7 python2.7-dev
 RUN apt-get -y install libpq-dev
 RUN apt-get -y install python-pip
@@ -10,7 +9,7 @@ RUN apt-get -y install sqlite3
 
 RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF
 RUN echo "deb http://download.mono-project.com/repo/debian wheezy main" | tee /etc/apt/sources.list.d/mono-xamarin.list
-RUN apt-get update
+
 RUN apt-get -y install mono-complete
 
 RUN apt-get -y install unzip
@@ -29,18 +28,16 @@ RUN pip install simplekml
 RUN apt-get -y install zip
 RUN pip install sqlalchemy
 
-RUN apt-get update
 RUN apt-get -y install sox
 
 RUN useradd report_worker -m
 
-RUN apt-get update
 RUN apt-get -y install python-mysqldb
-RUN apt-get update
+
 RUN apt-get -y install git-core
 RUN apt-get -y install gdal-bin
 RUN apt-get -y install python-gdal
-RUN apt-get update
+
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y tshark
 RUN pip install numba
 RUN pip install haversine
@@ -54,7 +51,7 @@ RUN pip install pytest
 RUN pip install PyMySQL
 RUN pip install psycogreen
 RUN pip install nose2
-RUN apt-get update
+
 RUN apt-get -y install libreoffice
 RUN pip install nose
 RUN pip install minio
