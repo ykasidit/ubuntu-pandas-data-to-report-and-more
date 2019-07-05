@@ -61,3 +61,5 @@ RUN pip install matplotlib==2.2.0
 
 RUN wget https://dl.minio.io/client/mc/release/linux-amd64/mc -O /usr/bin/mc
 RUN chmod +x /usr/bin/mc
+
+RUN apt-get -y install imagemagick
