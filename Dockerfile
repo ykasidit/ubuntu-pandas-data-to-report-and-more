@@ -64,3 +64,6 @@ RUN chmod +x /usr/bin/mc
 
 RUN apt-get -y install imagemagick
 RUN pip install zipstream
+RUN add-apt-repository -y ppa:jonathonf/ffmpeg-4
+RUN apt-get update
+RUN apt-get -y installffmpeg
