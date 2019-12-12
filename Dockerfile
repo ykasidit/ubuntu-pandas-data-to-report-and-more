@@ -69,3 +69,5 @@ RUN add-apt-repository -y ppa:jonathonf/ffmpeg-4
 RUN apt-get update
 RUN apt-get -y install ffmpeg
 RUN pip install opencv-python==4.1.2.30
+RUN pip install imutils
+RUN apt-get -y install tesseract-ocr
