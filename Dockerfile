@@ -71,3 +71,5 @@ RUN apt-get -y install ffmpeg
 RUN pip install opencv-python==4.1.2.30
 RUN pip install imutils
 RUN apt-get -y install tesseract-ocr
+RUN pip install celery
+RUN pip install pyarrow fastparquet
