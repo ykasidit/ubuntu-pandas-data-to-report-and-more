@@ -6,14 +6,12 @@ RUN apt-get -y install python-pip
 RUN apt-get -y install ssh
 RUN apt-get -y install python-matplotlib
 RUN apt-get -y install sqlite3
-
 RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF
-RUN echo "deb http://download.mono-project.com/repo/debian wheezy main" | tee /etc/apt/sources.list.d/mono-xamarin.list
-
+RUN apt -y install apt-transport-https ca-certificates
+RUN "deb https://download.mono-project.com/repo/ubuntu stable-xenial main" | tee /etc/apt/sources.list.d/mono-official-stable.list
+RUN apt-get -y update
 RUN apt-get -y install mono-complete
-
 RUN apt-get -y install unzip
-
 RUN pip install gevent==1.2.1
 RUN pip install bottle==0.12.13
 RUN pip install psycopg2==2.6.1
@@ -66,7 +64,6 @@ RUN apt-get -y install imagemagick
 RUN pip install zipstream
 RUN apt-get -y install software-properties-common
 RUN add-apt-repository -y ppa:jonathonf/ffmpeg-4
-RUN apt-get update
 RUN apt-get -y install ffmpeg
 RUN pip install opencv-python==4.1.2.30
 RUN pip install imutils
