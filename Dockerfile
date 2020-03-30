@@ -16,7 +16,7 @@ RUN pip install gevent==1.2.1
 RUN pip install bottle==0.12.13
 RUN pip install psycopg2==2.6.1
 RUN pip install bottle-pgsql==0.2
-RUN pip install pandas==0.24.2
+RUN pip install pandas==0.23.4
 RUN pip install openpyxl==2.4.0
 RUN pip install --upgrade pip
 RUN pip install smopy==0.0.6
