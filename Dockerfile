@@ -70,3 +70,8 @@ RUN pip install imutils
 RUN apt-get -y install tesseract-ocr
 RUN pip install celery
 RUN pip install pyarrow fastparquet
+RUN pip install pandas-gbq
+RUN pip install --upgrade google-cloud-bigquery
+RUN pip install --upgrade pyasn1-modules
+RUN pip install --upgrade cryptography
+RUN python -m easy_install --upgrade pyOpenSSL
