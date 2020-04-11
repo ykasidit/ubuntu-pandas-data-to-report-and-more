@@ -64,6 +64,7 @@ RUN apt-get -y install imagemagick
 RUN pip install zipstream
 RUN apt-get -y install software-properties-common
 RUN add-apt-repository -y ppa:jonathonf/ffmpeg-4
+RUN apt-get update
 RUN apt-get -y install ffmpeg
 RUN pip install opencv-python==4.1.2.30
 RUN pip install imutils
@@ -75,3 +76,4 @@ RUN pip install --upgrade google-cloud-bigquery
 RUN pip install --upgrade pyasn1-modules
 RUN pip install --upgrade cryptography
 RUN python -m easy_install --upgrade pyOpenSSL
+RUN pip install pydrill
