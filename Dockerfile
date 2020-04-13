@@ -77,3 +77,8 @@ RUN pip install --upgrade pyasn1-modules
 RUN pip install --upgrade cryptography
 RUN python -m easy_install --upgrade pyOpenSSL
 RUN pip install pydrill
+RUN apt-get -y install unixodbc-dev
+RUN apt-get -y install alien
+RUN curl http://package.mapr.com/tools/MapR-ODBC/MapR_Drill/MapRDrill_odbc_v1.3.22.1055/maprdrill-1.3.22.1055-1.x86_64.rpm --output /mapdrill_odbc.rpm
+RUN alien -i /mapdrill_odbc.rpm
+RUN rm /mapdrill_odbc.rpm
