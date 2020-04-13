@@ -82,3 +82,4 @@ RUN apt-get -y install alien
 RUN curl http://package.mapr.com/tools/MapR-ODBC/MapR_Drill/MapRDrill_odbc_v1.3.22.1055/maprdrill-1.3.22.1055-1.x86_64.rpm --output /mapdrill_odbc.rpm
 RUN alien -i /mapdrill_odbc.rpm
 RUN rm /mapdrill_odbc.rpm
+RUN pip install pyodbc
