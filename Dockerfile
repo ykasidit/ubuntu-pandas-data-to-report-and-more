@@ -83,3 +83,4 @@ RUN curl http://package.mapr.com/tools/MapR-ODBC/MapR_Drill/MapRDrill_odbc_v1.3.
 RUN alien -i /mapdrill_odbc.rpm
 RUN rm /mapdrill_odbc.rpm
 RUN pip install pyodbc
+RUN pip install sqlparse==0.3.1
