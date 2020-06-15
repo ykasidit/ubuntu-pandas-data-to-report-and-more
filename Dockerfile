@@ -84,3 +84,4 @@ RUN alien -i /mapdrill_odbc.rpm
 RUN rm /mapdrill_odbc.rpm
 RUN pip install pyodbc
 RUN pip install sqlparse==0.3.1
+RUN pip install mailjet-rest
