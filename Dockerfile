@@ -87,3 +87,6 @@ RUN pip install sqlparse==0.3.1
 RUN pip install mailjet-rest
 RUN pip install python-pptx
 RUN pip install duckdb==0.2.0
+RUN pip install pylint
+RUN pip install pyflakes
+RUN pip install flake8
