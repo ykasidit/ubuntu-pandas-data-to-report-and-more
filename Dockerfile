@@ -86,3 +86,4 @@ RUN pip install pyodbc
 RUN pip install sqlparse==0.3.1
 RUN pip install mailjet-rest
 RUN pip install python-pptx
+RUN pip install pylint
