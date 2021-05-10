@@ -90,3 +90,5 @@ RUN pip install duckdb==0.2.0
 RUN pip install pylint
 RUN pip install pyflakes
 RUN pip install flake8
+RUN pip install scikit-learn==0.20.4
+RUN pip install tensorflow==2.1.0
