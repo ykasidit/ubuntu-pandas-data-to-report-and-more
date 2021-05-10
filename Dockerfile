@@ -92,3 +92,4 @@ RUN pip install pyflakes
 RUN pip install flake8
 RUN pip install scikit-learn==0.20.4
 RUN pip install tensorflow==2.1.0
+RUN pip install joblib==0.14.1
