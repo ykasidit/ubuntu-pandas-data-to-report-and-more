@@ -92,7 +92,9 @@ RUN pip install pyodbc
 RUN pip install sqlparse==0.3.1
 RUN pip install mailjet-rest
 RUN pip install python-pptx
-RUN pip install duckdb==0.2.0
+RUN pip install duckdb==0.2.7
 RUN pip install pylint
 RUN pip install pyflakes
 RUN pip install flake8
+RUN apt-get -y install openjdk-11-jdk
+RUN pip install pyjnius
