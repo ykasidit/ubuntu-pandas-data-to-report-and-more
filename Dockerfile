@@ -111,4 +111,7 @@ RUN apt -y install libsqlite3-mod-spatialite
 RUN pip install spatialite==0.0.3
 RUN pip install mypy
 
+RUN apt-get -y install docker.io
+RUN apt-get -y install mosquitto-clients
+
 USER report_worker
