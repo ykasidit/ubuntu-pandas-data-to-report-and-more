@@ -16,12 +16,20 @@ RUN apt-get -y install lib32z1 libc6-i386 lib32stdc++6 lib32gcc1
 RUN mkdir /data
 RUN chmod 777 /data
 RUN python2 -m pip install gevent==20.9.0
-RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- --default-toolchain stable -y
-RUN /root/.cargo/bin/rustup target add \
-    aarch64-linux-android \
-    armv7-linux-androideabi
 RUN mkdir /android-sdk
-ADD ./android-ndk-r22b /android-sdk/android-ndk-r22b
-ENV PATH="/android-sdk/android-ndk-r22b:$PATH" 
+RUN chmod 777 /android-sdk
 
 USER report_worker
+
+# copy the android sdk
+ADD ./android-ndk-r22b /android-sdk/android-ndk-r22b
+
+# install rust stuff
+RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- --default-toolchain stable -y
+ENV PATH="/home/report_worker/.cargo/bin:$PATH"
+RUN cargo install cargo-ndk
+RUN cargo install cbindgen
+ENV PATH="/android-sdk/android-ndk-r22b:$PATH"
+RUN rustup target add \
+    aarch64-linux-android \
+    armv7-linux-androideabi
