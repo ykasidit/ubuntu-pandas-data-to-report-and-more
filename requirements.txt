@@ -1,0 +1,52 @@
+pyOpenSSL
+gevent
+bottle
+psycopg2
+bottle-pgsql
+pandas
+openpyxl==2.4.0
+pip
+smopy==0.0.6
+psutil==3.4.2
+scipy
+simplekml
+sqlalchemy
+numba
+haversine
+chaversine
+humanize
+redis
+pytest
+PyMySQL
+psycogreen
+nose2
+nose
+minio
+pyjwt
+requests
+zipstream
+opencv-python
+imutils
+pyarrow
+pandas-gbq
+ google-cloud-bigquery
+ pyasn1-modules
+ cryptography
+pydrill
+pyodbc
+sqlparse==0.3.1
+mailjet-rest
+python-pptx
+duckdb==0.2.7
+pylint
+pyflakes
+flake8
+pyjnius
+joblib
+sklearn
+modestimage
+ google-cloud-storage
+spatialite==0.0.3
+mypy
+pdoc
+jupyterlab
