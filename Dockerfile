@@ -3,8 +3,8 @@ FROM ykasidit/ubuntu-pandas-data-to-report-and-more-python3:latest
 USER root
 
 RUN apt-get update
-RUN apt-get -y install docker.io
-RUN apt-get -y install mosquitto-clients
+RUN apt-get -y install docker.io mosquitto-clients
+RUN pip install pdoc jupyterlab
 
 RUN wget https://www.openssl.org/source/openssl-1.1.1p.tar.gz -O openssl-1.1.1p.tar.gz && \
 tar -zxvf openssl-1.1.1p.tar.gz && \
