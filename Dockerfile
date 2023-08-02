@@ -3,6 +3,7 @@ FROM ykasidit/ubuntu-pandas-data-to-report-and-more-python3-ext:latest
 USER root
 RUN apt-get -y install xvfb ghostscript sudo
 ARG DEBIAN_FRONTEND=noninteractive
+RUN apt-get -y install libfprint-2-2 fprintd libpam-fprintd
 RUN apt-get -y install qgis
 
 USER report_worker
