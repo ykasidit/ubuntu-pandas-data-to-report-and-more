@@ -5,6 +5,6 @@ USER root
 RUN apt-get update
 RUN apt-get -y install docker.io mosquitto-clients
 RUN pip install pdoc jupyterlab
-RUN apt-get -y xvfb
+RUN apt-get -y install xvfb
 
 USER report_worker
