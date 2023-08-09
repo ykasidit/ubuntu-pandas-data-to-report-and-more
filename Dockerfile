@@ -10,8 +10,8 @@ RUN apt-get -y install python3-pyqt5
 COPY azenqos_qgis_plugin/Azenqos/requirements.txt /requirements.txt
 RUN pip install -r /requirements.txt
 RUN git clone --depth 1 --branch v3.7.1 https://github.com/OSGeo/gdal.git
-RUN apt -y install cmake libproj-dev
-RUN cd gdal && mkdir build && cd build && cmake .. && cmake --build . -j`nproc`
+RUN apt -y install cmake libproj-dev libkml-dev
+RUN cd gdal && mkdir build && cd build && cmake -DGDAL_ENABLE_DRIVER_LIBKML=ON .. && cmake --build . -j`nproc`
 RUN cd gdal/build && cmake --build . --target install
 
 USER report_worker
