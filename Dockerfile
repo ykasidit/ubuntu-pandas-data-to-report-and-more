@@ -13,5 +13,8 @@ RUN git clone --depth 1 --branch v3.7.1 https://github.com/OSGeo/gdal.git
 RUN apt -y install cmake libproj-dev libkml-dev
 RUN cd gdal && mkdir build && cd build && cmake -DGDAL_ENABLE_DRIVER_LIBKML=ON .. && cmake --build . -j`nproc`
 RUN cd gdal/build && cmake --build . --target install
+RUN pip install kazoo pdf2image==1.16.
+RUN apt-get update
+RUN apt-get -y install poppler-utils
 
 USER report_worker
