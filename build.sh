@@ -1,1 +1,1 @@
-docker build . -t ykasidit/ubuntu-pandas-data-to-report-and-more-python3-ext:latest
+cat requirements.txt > requirements_generated.txt && cat ~/azq_docker_containers/repos/azenqos_qgis_plugin/Azenqos/requirements.txt >> requirements_generated.txt && sudo docker build . -t ykasidit/ubuntu-pandas-data-to-report-and-more-python3-ext:latest
