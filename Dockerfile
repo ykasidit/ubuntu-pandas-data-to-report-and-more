@@ -58,7 +58,11 @@ RUN         set -x \
 #RUN         curl -sSL https://github.com/OSGeo/gdal/raw/2.2/gdal/data/esri_extra.wkt > \
 #                /usr/share/gdal/2.2/esri_extra.wkt
 
+
+RUN python3 -m pip install --upgrade pip
 COPY ./requirements_generated.txt /requirements.txt
-RUN pip install -r /requirements.txt
+RUN pip uninstall -y urllib3 requests
+RUN pip install boto3
+RUN pip install --upgrade -r /requirements.txt
 
 USER report_worker
