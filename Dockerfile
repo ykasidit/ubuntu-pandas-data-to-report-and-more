@@ -61,8 +61,9 @@ RUN         set -x \
 
 RUN python3 -m pip install --upgrade pip
 COPY ./requirements_generated.txt /requirements.txt
-RUN pip uninstall -y urllib3 requests
-RUN pip install boto3
-RUN pip install --upgrade -r /requirements.txt
+RUN pip install -r /requirements.txt
+RUN pip install requests==2.31.0
+RUN pip install boto3==1.33.13 botocore==1.33.13
+
 
 USER report_worker
