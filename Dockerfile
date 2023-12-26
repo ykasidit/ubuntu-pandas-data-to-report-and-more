@@ -64,6 +64,7 @@ COPY ./requirements_generated.txt /requirements.txt
 RUN pip install -r /requirements.txt
 RUN pip install requests==2.31.0
 RUN pip install boto3==1.33.13 botocore==1.33.13
-
+RUN wget https://dl.minio.io/client/mc/release/linux-amd64/mc -O /usr/bin/mc
+RUN chmod +x /usr/bin/mc
 
 USER report_worker
