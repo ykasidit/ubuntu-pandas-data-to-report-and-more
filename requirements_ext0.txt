@@ -1,0 +1,8 @@
+pyjnius
+joblib==1.0.1
+sklearn==0.0
+modestimage==0.2
+google-cloud-storage==1.41.0
+gunicorn==20.1.0
+spatialite==0.0.3
+mypy==0.910
