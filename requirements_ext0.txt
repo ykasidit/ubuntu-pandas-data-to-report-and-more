@@ -1,3 +1,4 @@
 kazoo
 mysqlclient
 etcd3
+boto3
