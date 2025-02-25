@@ -114,6 +114,6 @@ RUN pip install --upgrade -r /requirements_ext0.txt
 ### tests
 RUN python -c "from osgeo import ogr"
 
-### set default worker  
+### set default worker
 USER report_worker
 CMD ["/usr/bin/sleep", "infinity"]
