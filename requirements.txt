@@ -55,3 +55,4 @@ spatialite==0.0.3
 mypy==0.910
 pdoc
 jupyterlab
+imutils
