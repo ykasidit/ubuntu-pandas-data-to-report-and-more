@@ -1,2 +1,2 @@
 IMAGE=`cat IMAGE`
-docker push $IMAGE
+sudo docker push $IMAGE
